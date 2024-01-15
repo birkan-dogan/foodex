@@ -1,11 +1,10 @@
 import Image from "next/image";
 import logo from "@/assets/logo.jpg";
-import motorcycle from "@/assets/motorcycle.jpg";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between items-center bg-[#FFF8EE] px-40 py-4">
-      <div>
+    <div className="flex justify-between gap-4 items-center bg-[#FFF8EE] px-40 py-4">
+      <div className="min-w-16 min-h-16">
         <Image alt="food-order" src={logo} />
       </div>
       <div className="flex justify-center gap-8 cursor-pointer text-[#2A435D] font-bold text-lg ml-32">
@@ -15,9 +14,9 @@ export default function Navbar() {
         <span>PAGES</span>
         <span>CONTACT</span>
       </div>
-      <div className="flex items-center gap-6">
+      <div className="hidden xl:flex items-center gap-6 ">
         {/* cart */}
-        <div className="w-16 h-16 flex justify-center bg-[#2A435D] text-[#FFF8EE] rounded-full cursor-pointer">
+        <div className="min-w-16 min-h-16 flex justify-center bg-[#2A435D] text-[#FFF8EE] rounded-full cursor-pointer">
           <div className="flex flex-col items-center">
             <span className="font-bold">2</span>
             <svg
@@ -39,13 +38,6 @@ export default function Navbar() {
             <p className="font-bold">Delivery Order</p>
             <p>+880 1630 225 015</p>
           </div>
-          <Image
-            alt="food-order"
-            src={motorcycle}
-            width={40}
-            height={35}
-            aspectRatio={5 / 3}
-          />
         </div>
         <div>
           <button className="bg-[#CC3333] text-[#FFF8EE] px-4 py-2 rounded-md uppercase font-bold hover:bg-opacity-80 transition duration-300">

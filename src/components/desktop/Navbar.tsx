@@ -3,7 +3,7 @@ import logo from "@/assets/logo.jpg";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between gap-4 items-center bg-[#FFF8EE] px-40 py-4">
+    <div className="flex justify-between gap-4 items-center px-40 py-4">
       <div className="min-w-16 min-h-16">
         <Image alt="food-order" src={logo} />
       </div>

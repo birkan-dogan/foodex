@@ -1,22 +1,21 @@
-import Image from "next/image";
 import logo from "@/assets/logo.jpg";
+import motorcycle from "@/assets/motorcycle.jpg";
+import Image from "../../../node_modules/next/image";
 
 export default function Navbar() {
   return (
     <div className="flex justify-between gap-4 items-center px-40 py-4">
-      <div className="min-w-16 min-h-16">
-        <Image alt="food-order" src={logo} />
-      </div>
-      <div className="flex justify-center gap-8 cursor-pointer text-[#2A435D] font-bold text-lg ml-32">
+      <Image alt="food-order" src={logo} className="w-16 h-16" />
+      <div className="flex justify-center gap-8 cursor-pointer text-primary font-bold text-lg">
         <span>HOME</span>
         <span>ABOUT</span>
         <span>ITEMS</span>
         <span>PAGES</span>
         <span>CONTACT</span>
       </div>
-      <div className="hidden xl:flex items-center gap-6 ">
+      <div className="flex items-center gap-6 ">
         {/* cart */}
-        <div className="min-w-16 min-h-16 flex justify-center bg-[#2A435D] text-[#FFF8EE] rounded-full cursor-pointer">
+        <div className="min-w-16 min-h-16 flex justify-center bg-primary text-white rounded-full cursor-pointer">
           <div className="flex flex-col items-center">
             <span className="font-bold">2</span>
             <svg
@@ -33,14 +32,15 @@ export default function Navbar() {
             </svg>
           </div>
         </div>
-        <div className="flex gap-3 cursor-pointer">
-          <div className="text-center">
-            <p className="font-bold">Delivery Order</p>
+        <div className="flex gap-3 cursor-pointer w-48">
+          <div className="text-center ">
+            <p className="font-bold text-primary">Delivery Order</p>
             <p>+880 1630 225 015</p>
           </div>
+          <Image alt="food-order" src={motorcycle} width={36} height={12} />
         </div>
         <div>
-          <button className="bg-[#CC3333] text-[#FFF8EE] px-4 py-2 rounded-md uppercase font-bold hover:bg-opacity-80 transition duration-300">
+          <button className="bg-secondary text-white border border-secondary hover:bg-white hover:text-secondary hover:border border-stroke px-4 py-2 rounded-md uppercase font-bold hover:bg-opacity-80 transition duration-300">
             Login
           </button>
         </div>

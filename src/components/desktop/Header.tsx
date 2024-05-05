@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="flex justify-between bg-[#CC3333] text-[#FFF8EE] w-full py-2 px-36 text-sm">
+    <div className="flex justify-between bg-secondary text-white w-full py-2 px-36 text-sm">
       <div className="flex gap-16">
         {/* clock */}
         <div className="flex gap-4 items-center">
@@ -36,9 +36,9 @@ const Header = () => {
         </div>
       </div>
       {/* register button */}
-      <button className="bg-[#FFF8EE] text-[#CC3333] px-4 py-2 rounded-md uppercase font-bold hover:bg-opacity-80 transition duration-300">
+      <p className="cursor-pointer hover:underline underline-offset-4">
         REGISTER
-      </button>
+      </p>
     </div>
   );
 };
